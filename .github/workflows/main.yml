@@ -61,7 +61,7 @@ jobs:
 
       - name: Display connection info
         run: |
-          $apiUrl = "http://127.0.0.1:4050/api/tunnels"
+          $apiUrl = "http://127.0.0.1:4040/api/tunnels"
           try {
             $response = Invoke-RestMethod -Uri $apiUrl
             $tcpAddr = ($response.tunnels | Where-Object { $_.proto -eq "tcp" }).public_url
